@@ -1,0 +1,32 @@
+<!-- templates/post.html -->
+
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<form action='/presenca/gravar' method='post'>
+  <p>
+    <label for='email'>Email:</label><br>
+    <input id='email' type='email' name='email'>
+  </p>
+  <p>
+    <label for='presenca'>Presença:</label><br>
+    <input id='presente' type='radio' name='presenca' value="presente">
+    <label for="presente">Presente</label><br>
+    <input id='ausente' type='radio' name='presenca' value="ausente">
+    <label for="ausente">Ausente</label><br>
+  </p>
+  <p>
+    <label for='resposta'>Resposta:</label><br>
+    <input id='resposta' type='text' name='resposta'>
+  </p>
+  <p>
+    <label for='comentarios'>Comentários:</label><br>
+    <textarea id='comentarios' name='comentarios'></textarea>
+  </p>
+  <p>
+    <input type='submit' value='Enviar'>
+  </p>
+</form>
+
+{% endblock %}
